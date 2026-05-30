@@ -8,6 +8,25 @@
    ============================================== */
 
 /* ================================================
+   GLOBAL RESPONSIVE RESETS
+   ================================================ */
+html {
+  overflow-x: hidden;
+}
+
+img,
+video,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+/* ================================================
    FLUID TYPOGRAPHY — scales with viewport
    ================================================ */
 :root {
@@ -268,7 +287,13 @@
   .ch-policy-wrapper { padding: 32px 16px 48px; }
   .ch-policy-content h2 { font-size: 1.8rem; }
   .ch-policy-highlight { flex-direction: column; gap: 12px; }
-  .ch-policy-table { font-size: 1.3rem; }
+  .ch-policy-table {
+    display: block;
+    font-size: 1.3rem;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
   .ch-policy-table th, .ch-policy-table td { padding: 10px 12px; }
   .ch-policy-contact-bar { flex-direction: column; text-align: center; }
   .ch-policy-contact-bar > div { justify-content: center; }
@@ -1849,5 +1874,86 @@
 
   .ch-hero__trust-strip {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================
+   31. TABLET RANGE (750px – 989px) ADJUSTMENTS
+   ================================================ */
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  /* Hero: scale down heading slightly at tablet */
+  .ch-hero__heading { font-size: clamp(2.6rem, 5vw, 4rem) !important; }
+
+  /* Expert CTA — wrap buttons when viewport is tight */
+  .ch-expert__cta-group { flex-wrap: wrap; justify-content: center; }
+
+  /* Blog heading */
+  .ch-blog-section__heading { font-size: 2.8rem !important; }
+
+  /* Product page breadcrumb */
+  .ch-pdp-breadcrumb { gap: 8px; }
+
+  /* Testimonials card width */
+  .ch-testimonials__card { min-width: calc(50vw - 48px); }
+}
+
+/* ================================================
+   32. VERY SMALL SCREENS (≤ 360px)
+   ================================================ */
+@media screen and (max-width: 360px) {
+  /* Hero */
+  .ch-hero__heading { font-size: 2.2rem !important; }
+  .ch-hero__btn { font-size: 1.35rem; }
+
+  /* Concerns grid — tighten circles */
+  .ch-concerns__grid { gap: 10px; }
+  .ch-concern-item__img-wrap { width: 68px; height: 68px; font-size: 1.8rem; }
+  .ch-concern-item__label { font-size: 1.15rem; }
+
+  /* Why choose us — tighter padding */
+  .ch-why-us__item { padding: 20px 14px; }
+
+  /* Trust badges — stack to single column */
+  .ch-trust-badges__inner { grid-template-columns: 1fr; }
+
+  /* Page heading */
+  .ch-page-hero__heading { font-size: 2.2rem; }
+
+  /* Product page */
+  .ch-pdp-title { font-size: 2rem !important; }
+
+  /* Reduce section padding */
+  .ch-why-us,
+  .ch-testimonials,
+  .ch-concerns,
+  .ch-ingredients,
+  .ch-hiw { padding: 36px 0 !important; }
+}
+
+/* ================================================
+   33. RESPONSIVE TABLES — order & account pages
+   ================================================ */
+@media screen and (max-width: 749px) {
+  .main-order table,
+  .main-account table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ================================================
+   34. VIDEO / IFRAME ASPECT RATIO ON MOBILE
+   ================================================ */
+@media screen and (max-width: 749px) {
+  .ch-video-testimonials__media {
+    aspect-ratio: 9 / 14;
+  }
+
+  /* Ensure embedded YouTube / Vimeo iframes don't overflow */
+  .ch-video-testimonials__iframe,
+  .ch-video-testimonials__media iframe {
+    height: 100% !important;
+    width: 100% !important;
   }
 }
