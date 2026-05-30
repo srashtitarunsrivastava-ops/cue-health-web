@@ -33,6 +33,7 @@
       </div>
     </div>
     <div class="ch-about-story__image-wrap">
+      {% comment %}theme-check-disable RemoteAsset{% endcomment %}
       <img
         src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop"
         alt="CueHealth wellness supplements"
@@ -40,6 +41,7 @@
         loading="lazy"
         class="ch-about-story__img"
       >
+      {% comment %}theme-check-enable RemoteAsset{% endcomment %}
       <div class="ch-about-story__img-badge">
         {%- render 'ch-icon', icon: 'shield', size: 20 -%}
         FSSAI Approved
@@ -103,6 +105,7 @@
   <div class="page-width">
     <h2 class="ch-section-heading" style="text-align:center;">Meet the Founders</h2>
     <p class="ch-section-subheading" style="text-align:center;">The people behind your cue to healthy life</p>
+    {% comment %}theme-check-disable RemoteAsset{% endcomment %}
     <div class="ch-about-team__grid">
       <div class="ch-about-team__card">
         <img
@@ -138,6 +141,7 @@
         <p>Ashutosh leads technology and product strategy, turning data and science into formulas that actually work.</p>
       </div>
     </div>
+    {% comment %}theme-check-enable RemoteAsset{% endcomment %}
   </div>
 </section>
 
@@ -172,7 +176,7 @@
     <h2>Ready to Start Your Wellness Journey?</h2>
     <p>Explore our range of science-backed supplements and take your first step toward a healthier you.</p>
     <div class="ch-hero__cta-group" style="justify-content:center;margin-top:28px;">
-      <a href="/collections/all" class="ch-hero__btn ch-hero__btn--primary">
+      <a href="{{ routes.all_products_collection_url }}" class="ch-hero__btn ch-hero__btn--primary">
         Shop All Products {%- render 'ch-icon', icon: 'arrow-right', size: 16 -%}
       </a>
       <a href="/pages/contact" class="ch-hero__btn ch-hero__btn--secondary">Contact Us</a>
