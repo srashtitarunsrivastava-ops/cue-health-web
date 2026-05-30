@@ -4,19 +4,6 @@
   'use strict';
 
   /* =========================================
-     WHATSAPP FLOATING BUTTON
-     ========================================= */
-  function initWhatsApp() {
-    var btn = document.getElementById('ch-whatsapp-btn');
-    if (!btn) return;
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      var msg = encodeURIComponent('Hi! I have a query about CueHealth products.');
-      window.open('https://wa.me/917455918832?text=' + msg, '_blank');
-    });
-  }
-
-  /* =========================================
      STICKY ADD-TO-CART BAR (product pages)
      ========================================= */
   function initStickyATC() {
@@ -291,7 +278,6 @@
      INIT
      ========================================= */
   document.addEventListener('DOMContentLoaded', function () {
-    initWhatsApp();
     initStickyATC();
     initTestimonialsCarousel();
     initProductTabs();

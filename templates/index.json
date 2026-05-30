@@ -15,7 +15,7 @@
         "btn1_label": "Shop Ayurvedic Products",
         "btn1_link": "shopify://collections/all",
         "btn2_label": "Free Consultation",
-        "btn2_link": "shopify://pages/contact-us",
+        "btn2_link": "shopify://pages/contact",
         "overlay_opacity": 55,
         "overlay_direction": "to right",
         "min_height": 85,
@@ -106,11 +106,11 @@
     "shop_by_concern": {
       "type": "shop-by-concern",
       "blocks": {
-        "c1": { "type": "concern", "settings": { "label": "Sleep & Recovery", "fa_icon": "fa-moon" } },
-        "c2": { "type": "concern", "settings": { "label": "Immunity",         "fa_icon": "fa-shield-halved" } },
-        "c3": { "type": "concern", "settings": { "label": "Women's Health",   "fa_icon": "fa-venus" } },
-        "c4": { "type": "concern", "settings": { "label": "Gut Health",       "fa_icon": "fa-leaf" } },
-        "c5": { "type": "concern", "settings": { "label": "Energy & Focus",   "fa_icon": "fa-bolt" } }
+        "c1": { "type": "concern", "settings": { "label": "Sleep & Recovery", "fa_icon": "fa-moon",          "link": "shopify://collections/sleep" } },
+        "c2": { "type": "concern", "settings": { "label": "Immunity",         "fa_icon": "fa-shield-halved", "link": "shopify://collections/immunity" } },
+        "c3": { "type": "concern", "settings": { "label": "Women's Health",   "fa_icon": "fa-venus",         "link": "shopify://collections/womens-health" } },
+        "c4": { "type": "concern", "settings": { "label": "Gut Health",       "fa_icon": "fa-leaf",          "link": "shopify://collections/gut-health" } },
+        "c5": { "type": "concern", "settings": { "label": "Energy & Focus",   "fa_icon": "fa-bolt",          "link": "shopify://collections/energy" } }
       },
       "block_order": ["c1","c2","c3","c4","c5"],
       "settings": {
